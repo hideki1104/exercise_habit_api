@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'User SignIn API' do
+RSpec.describe "Api::V1::Auth::Sessions", type: :request do
   context '正常:' do
     context 'メールアドレス、パスワードが正しい場合' do
       before do

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'User SignUp API' do
+RSpec.describe "Api::V1::Auth::Registrations", type: :request do
   context '正常: ' do
     context 'パラメータが正しい場合' do
       before do
@@ -76,6 +76,5 @@ describe 'User SignUp API' do
         expect(response_data['status']).to eq('error')
       end
     end
-    # パスワードが◯文字以下の場合、レスポンスでエラーが返却されること
   end
 end
